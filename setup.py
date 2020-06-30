@@ -1,13 +1,7 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+import setuptools
 
-
-setup(
+setuptools.setup(
     name='django-site-local-middleware',
-    version='2020.3.31',
-    packages=[
-        'django_site_local_middleware',
-    ],
+    install_requires=open('requirements.txt').read().splitlines(),
+    packages=setuptools.find_packages()
 )
